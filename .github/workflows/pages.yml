@@ -26,6 +26,6 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
       - name: Install dependencies
-        run: npm run install
+        run: npm install
       - name: Generate Site html
         run: npm run generate
