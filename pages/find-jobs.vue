@@ -3,8 +3,6 @@
     <div>
       <h1 class="title">Find Jobs</h1>
     </div>
-
-    <Navigation />
   </div>
 </template>
 

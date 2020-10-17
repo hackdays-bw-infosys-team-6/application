@@ -3,8 +3,6 @@
     <div>
       <h1 class="title">Inspirations</h1>
     </div>
-
-    <Navigation />
   </div>
 </template>
 

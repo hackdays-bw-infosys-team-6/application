@@ -3,8 +3,6 @@
     <div>
       <h1 class="title">Learn</h1>
     </div>
-
-    <Navigation />
   </div>
 </template>
 

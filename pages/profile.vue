@@ -46,8 +46,6 @@
         </ul>
       </div>
     </div>
-
-    <Navigation />
   </div>
 </template>
 

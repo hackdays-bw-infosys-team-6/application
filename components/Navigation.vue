@@ -11,6 +11,8 @@
 <style>
 .navigation-links {
   position: fixed;
+  display: flex;
+  justify-content: space-around;
   bottom: 0;
   width: 100%;
   height: 32px;
