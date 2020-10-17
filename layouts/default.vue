@@ -51,8 +51,8 @@ ul {
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-size: 64px;
+  color: white;
   letter-spacing: 1px;
 }
 

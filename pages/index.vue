@@ -3,13 +3,14 @@
     <div>
       <h1 class="title">Skill Match</h1>
       <div class="links">
+
         <div class="login">
-          <input type="text" name="email" placeholder="email">
-          <input type="text" name="password" placeholder="password">
-          <nuxt-link to="/profile">Login</nuxt-link>
+          <v-text-field label="Email" solo></v-text-field>
+          <v-text-field label="Password" solo></v-text-field>
+          <v-btn depressed elevation="2" rounded to="/profile">Login</v-btn>
         </div>
 
-        <nuxt-link to="/sign-up" class="sign-up">Sign Up</nuxt-link>
+        <v-btn depressed elevation="2" rounded to="/sign-up" class="next-btn">Sign Up</v-btn>
       </div>
     </div>
   </div>
@@ -24,19 +25,12 @@ export default Vue.extend({
 </script>
 
 <style>
-.links,
 .login {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  margin: auto;
 }
 
-.login {
-  padding-top: 32px;
-}
-
-.sign-up {
-  padding-top: 64px;
+.next-btn {
+  margin-top: 64px;
 }
 </style>
