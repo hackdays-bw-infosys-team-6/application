@@ -32,6 +32,8 @@
       </div>
 
     </div>
+
+    <Navigation />
   </div>
 </template>
 
