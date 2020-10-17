@@ -25,6 +25,7 @@ jobs:
       # Setup Node
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.2
-      # Generates the site html
-      - name: Generate Client
+      - name: Install dependencies
+        run: npm run generate
+      - name: Generate Site html
         run: npm run generate
