@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate Site html
+        env:
+          # Needs to be equal to the name of the repository for pages
+          NUXT_CFG_ROUTER_BASE: application
         run: npm run generate
       - name: Publish Result
         uses: peaceiris/actions-gh-pages@v3.7.2
