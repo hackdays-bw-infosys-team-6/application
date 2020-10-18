@@ -47,11 +47,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+import smoothscroll from 'smoothscroll-polyfill';
 
 export default Vue.extend({
   layout: 'setup'
 })
+
+smoothscroll.polyfill();
 </script>
 
 <style>
