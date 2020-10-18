@@ -56,10 +56,16 @@ ul {
   letter-spacing: 1px;
 }
 
+@media (max-width: 900px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  max-width: 500px;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
