@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <div>
+    <div class="profile-container">
       <div>
-        <button @click="setShowFutureProfile(false)">Current Profile</button>
-        <button @click="setShowFutureProfile(true)">Future Profile</button>
-      </div>
-
-      <div>
-        <img src="https://image.shutterstock.com/image-photo/portrait-mature-blond-man-smiling-600w-682038574.jpg"
+        <img src="thomas-profile.jpeg"
              alt="profile" class="profile-image">
         <p>{{name}}</p>
         <p>{{email}}</p>
+      </div>
+
+      <div class="profile-modes-container">
+        <v-btn @click="setShowFutureProfile(false)" depressed elevation="2" rounded>Current Profile</v-btn>
+        <v-btn @click="setShowFutureProfile(true)" depressed elevation="2" rounded>Future Profile</v-btn>
       </div>
 
       <div class="profile-section">
@@ -24,9 +24,11 @@
 
       <div class="profile-section">
         <h2>SKILLS</h2>
-        <v-chip v-for="(skill, i) in skills" v-bind:key="i" :color="getColorOf(skill)">
-          {{skill.name}}
-        </v-chip>
+        <div class="chips-container">
+          <v-chip v-for="(skill, i) in skills" v-bind:key="i" :color="getColorOf(skill)">
+            {{skill.name}}
+          </v-chip>
+        </div>
       </div>
 
       <div class="profile-section">
@@ -84,11 +86,50 @@ export default Vue.extend({
 <style>
   .profile-section {
     margin-top: 32px;
+    text-align: left;
+  }
+
+  .profile-container {
+    max-width: 500px;
   }
 
   .profile-image {
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
+    height: 160px;
+    width: 160px;
+    border: 2px solid #19bcf4;
+  }
+
+  .profile-modes-container {
+    margin-bottom: 32px;
+  }
+
+  .profile-modes-container .v-btn {
+    background-color: #19bcf4 !important;
+    color: white;
+  }
+
+  .chips-container {
+    margin-left: 24px;
+  }
+
+  .v-chip {
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  .v-chip:not(last-child) {
+    margin-right: 8px;
+  }
+
+  .profile-section h2 {
+    color: rgb(0 0 0 / 0.87);
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  li {
+    margin: 10px 0;
   }
 </style>
