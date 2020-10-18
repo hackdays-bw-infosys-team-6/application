@@ -5,8 +5,19 @@
         <h1 class="title setup-title">{{question.question}}</h1>
         <div class="actions">
           <template v-if="questions.length !== currentQuestion">
-            <v-btn v-for="answer in question.answers" v-bind:key="answer.label" depressed elevation="2" rounded @click="nextQuestion">{{answer.label}}</v-btn>
-            <!-- outlined to="/profile" class="reject-btn" -->
+            <v-btn
+              v-for="answer in question.answers"
+              v-bind:key="answer.label"
+              depressed
+              elevation="2"
+              rounded
+              :outlined="answer.outlined"
+              @click="nextQuestion"
+              v-bind:class="{ 'reject-btn': answer.leave }"
+              :to="answer.leave ? '/profile' : undefined"
+            >
+              {{answer.label}}
+            </v-btn>
           </template>
           <v-btn v-if="questions.length === currentQuestion" depressed elevation="2" rounded to="/profile">View Profile</v-btn>
         </div>
@@ -36,16 +47,15 @@ export default Vue.extend({
       currentQuestion: 1,
       questions: [
         {
-          question: "We would like to get to know you better",
+          question: "Hi Thomas, we would like to get to know you better",
           answers: [
             {
               label: 'No, Thanks',
-              style: 'outlined',
-              action: 'profile'
+              outlined: true,
+              leave: true
             },
             {
-              label: 'Sure',
-              style: 'default'
+              label: 'Sure'
             }
           ]
         },
@@ -53,16 +63,13 @@ export default Vue.extend({
           question: "Are you currently employed?",
           answers: [
             {
-              label: 'Skip',
-              style: 'outlined'
+              label: 'Skip'
             },
             {
               label: 'No',
-              style: 'default'
             },
             {
-              label: 'Yes',
-              style: 'default'
+              label: 'Yes'
             }
           ]
         },
@@ -70,16 +77,13 @@ export default Vue.extend({
           question: "Are you urgently in need of a job?",
           answers: [
             {
-              label: 'Skip',
-              style: 'outlined'
+              label: 'Skip'
             },
             {
-              label: 'No',
-              style: 'default'
+              label: 'No'
             },
             {
-              label: 'Yes',
-              style: 'default'
+              label: 'Yes'
             }
           ]
         },
