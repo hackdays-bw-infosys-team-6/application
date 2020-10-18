@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <v-app>
     <Nuxt />
 
     <Navigation />
-  </div>
+  </v-app>
 </template>
 
 <style>
