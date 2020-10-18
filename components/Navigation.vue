@@ -1,20 +1,52 @@
 <template>
-  <div class="navigation-links">
-    <nuxt-link to="/find-jobs">Find</nuxt-link>
-    <nuxt-link to="/inspirations">Inspirations</nuxt-link>
-    <nuxt-link to="/saved-jobs">Saved</nuxt-link>
-    <nuxt-link to="/learn">Learn</nuxt-link>
-    <nuxt-link to="/profile">Profile</nuxt-link>
-  </div>
+  <v-card>
+    <v-footer fixed padless>
+      <v-btn v-for="nav in navigations" :key="nav.icon" :to="nav.route" class="mx-4" icon>
+        <v-icon size="24px">{{ nav.icon }}</v-icon>
+      </v-btn>
+    </v-footer>
+  </v-card>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data: () => {
+    return {
+      navigations: [
+        {
+          icon: 'mdi-magnify',
+          route: '/find-jobs'
+        },
+        {
+          icon: 'mdi-play-box-multiple',
+          route: '/inspirations'
+        },
+        {
+          icon: 'mdi-heart-outline',
+          route: '/saved-jobs'
+        },
+        {
+          icon: 'mdi-text-box-multiple',
+          route: '/learn'
+        },
+        {
+          icon: 'mdi-account-outline',
+          route: '/profile'
+        }
+      ],
+    }
+  }
+})
+</script>
+
 <style>
-.navigation-links {
-  position: fixed;
+.v-footer {
   display: flex;
   justify-content: space-around;
   bottom: 0;
   width: 100%;
-  height: 32px;
+  height: 50px;
 }
 </style>

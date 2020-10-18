@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">Skill Match</h1>
+      <h1 class="title setup-title">Skill Match</h1>
       <div class="links">
 
         <div class="login">

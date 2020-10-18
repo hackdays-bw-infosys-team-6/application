@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">Upload Profile</h1>
+      <h1 class="title setup-title">Upload Profile</h1>
       <div class="uploads">
         <input type="file" name="" id="">
 

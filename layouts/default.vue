@@ -52,7 +52,7 @@ ul {
   display: block;
   font-weight: 300;
   font-size: 64px;
-  color: white;
+  color: #35495e;
   letter-spacing: 1px;
 }
 

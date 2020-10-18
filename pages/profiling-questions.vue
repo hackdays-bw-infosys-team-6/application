@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <div v-for="question in filterQuestions()" v-bind:key="question.question" class="question">
-        <h1 class="title">{{question.question}}</h1>
+        <h1 class="title setup-title">{{question.question}}</h1>
         <div class="actions">
           <template v-if="questions.length !== currentQuestion">
             <v-btn v-for="answer in question.answers" v-bind:key="answer.label" depressed elevation="2" rounded @click="nextQuestion">{{answer.label}}</v-btn>

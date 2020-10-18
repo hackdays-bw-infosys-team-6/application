@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">Welcome</h1>
+      <h1 class="title setup-title">Welcome</h1>
       <div class="links">
 
         <v-text-field label="Email" solo></v-text-field>

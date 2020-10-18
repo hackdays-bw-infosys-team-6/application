@@ -31,6 +31,10 @@ html {
   margin: 0;
 }
 
+.title.setup-title {
+  color: white;
+}
+
 .setup-container {
   /* background: #ff9966;
   background: -webkit-linear-gradient(to top, #ff5e62, #ff9966);
