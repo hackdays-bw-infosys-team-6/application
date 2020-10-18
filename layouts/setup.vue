@@ -52,7 +52,7 @@ html {
 .links {
   display: flex;
   flex-direction: column;
-  max-width: 250px;
+  width: 270px;
   margin: auto;
   margin-top: 64px;
 }

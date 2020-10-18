@@ -19,6 +19,15 @@
         <img src="screenshot-profile.png" alt="" srcset="">
         <img src="screenshot-courses.png" alt="" srcset="">
       </div>
+
+      <!-- <h1>For companies</h1>
+      <p>Struggling to find digital talent?</p>
+      <p>With Skill Match you can</p>
+      <ul>
+        <li>Reduce hiring time and effort by automatic applicant profiling</li>
+        <li>Discovered raw talent and seasoned professionals</li>
+      </ul> -->
+
     </div>
     <div class="login-container">
       <h1 class="title setup-title hide-on-desktop">Skill Match</h1>
