@@ -72,6 +72,14 @@ export const state = () => ({
       location: 'Berlin',
       posted: '3 days ago',
       liked: false
+    },
+    {
+      title: 'Quality Assurance',
+      company: 'Continental',
+      logo: '',
+      location: 'Nuremberg',
+      posted: '30+ days ago',
+      liked: false
     }
   ]
 })

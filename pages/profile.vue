@@ -34,7 +34,7 @@
       <div class="profile-section">
         <h2>EDUCATION</h2>
         <ul>
-          <li v-for="(education, i) in education" v-bind:key="i">{{ education.name }}</li>
+          <li v-for="(education, i) in education" v-bind:key="i" v-bind:style="{ color: education.future ? 'orange' : '', cursor: education.future ? 'pointer' : '' }">{{ education.name }}</li>
         </ul>
       </div>
 
@@ -91,6 +91,7 @@ export default Vue.extend({
 
   .profile-container {
     max-width: 500px;
+    margin-bottom: 100px;
   }
 
   .profile-image {
