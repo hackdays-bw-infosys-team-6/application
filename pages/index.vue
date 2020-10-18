@@ -100,17 +100,20 @@ p {
   padding: 2px;
   border-radius: 20px;
   width: 200px;
+  height: 428px;
 }
 
 @media (max-width: 1200px) {
   .screenshot-container img {
     width: 150px;
+    height: 321px;
   }
 }
 
 @media (max-width: 900px) {
   .screenshot-container img {
     width: 100px;
+    height: 214px;
   }
 }
 
