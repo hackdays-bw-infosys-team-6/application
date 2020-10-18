@@ -36,17 +36,9 @@ html {
 }
 
 .setup-container {
-  /* background: #ff9966;
-  background: -webkit-linear-gradient(to top, #ff5e62, #ff9966);
-  background: linear-gradient(to top, #ff5e62, #ff9966); */
-
-  /* background: #36D1DC;
-  background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);
-  background: linear-gradient(to top, #5B86E5, #36D1DC); */
-
-  background: #00d2ff;
-  background: -webkit-linear-gradient(to bottom, #3a7bd5, #00d2ff);
-  background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
+  background: #56ab2f;
+  background: -webkit-linear-gradient(to top, #a8e063, #56ab2f);
+  background: linear-gradient(to top, #a8e063, #56ab2f);
 }
 
 .links {

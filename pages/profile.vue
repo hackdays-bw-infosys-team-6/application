@@ -98,7 +98,7 @@ export default Vue.extend({
     border-radius: 50%;
     height: 160px;
     width: 160px;
-    border: 2px solid #19bcf4;
+    border: 2px solid #56ab2f;
   }
 
   .profile-modes-container {
@@ -106,7 +106,7 @@ export default Vue.extend({
   }
 
   .profile-modes-container .v-btn {
-    background-color: #19bcf4 !important;
+    background-color: #56ab2f !important;
     color: white;
   }
 

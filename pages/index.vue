@@ -87,7 +87,7 @@ p {
 }
 
 .screenshot-container img {
-  background: #19bcf4;
+  background: #56ab2f;
   padding: 2px;
   border-radius: 20px;
   width: 200px;
@@ -116,7 +116,7 @@ p {
 
 .pitch-container h1 {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: #19bcf4;
+  color: #56ab2f;
   font-weight: 300;
   font-size: 64px;
   letter-spacing: 1px;
