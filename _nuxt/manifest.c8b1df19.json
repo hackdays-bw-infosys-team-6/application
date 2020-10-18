@@ -1,7 +1,7 @@
 {
   "name": "application",
   "short_name": "application",
-  "description": "## Build Setup",
+  "description": "",
   "icons": [
     {
       "src": "/application/_nuxt/icons/icon_64x64.44c41a.png",
