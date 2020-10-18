@@ -15,6 +15,7 @@
       <p>Join today, by signing up and downloading our application for your smartphone.</p>
 
       <div class="screenshot-container">
+        <img src="screenshot-profiling.png" alt="" srcset="">
         <img src="screenshot-profile.png" alt="" srcset="">
         <img src="screenshot-courses.png" alt="" srcset="">
       </div>
@@ -80,7 +81,19 @@ p {
   background: #19bcf4;
   padding: 2px;
   border-radius: 20px;
-  width: 150px;
+  width: 200px;
+}
+
+@media (max-width: 1200px) {
+  .screenshot-container img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .screenshot-container img {
+    width: 100px;
+  }
 }
 
 .login {
