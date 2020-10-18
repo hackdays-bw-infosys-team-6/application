@@ -9,8 +9,8 @@
       </div>
 
       <div class="profile-modes-container">
-        <v-btn @click="setShowFutureProfile(false)" depressed elevation="2" rounded>Current Profile</v-btn>
-        <v-btn @click="setShowFutureProfile(true)" depressed elevation="2" rounded>Future Profile</v-btn>
+        <v-btn @click="setShowFutureProfile(false)" depressed outlined elevation="2" rounded>Current Profile</v-btn>
+        <v-btn @click="setShowFutureProfile(true)" depressed outlined elevation="2" rounded>Future Profile</v-btn>
       </div>
 
       <div class="profile-section">
@@ -92,6 +92,7 @@ export default Vue.extend({
   .profile-container {
     max-width: 500px;
     margin-bottom: 100px;
+    padding: 0 8px;
   }
 
   .profile-image {
@@ -105,9 +106,16 @@ export default Vue.extend({
     margin-bottom: 32px;
   }
 
-  .profile-modes-container .v-btn {
-    background-color: #2fad65 !important;
-    color: white;
+  .profile-modes-container .v-btn:last-child {
+    border-color: #F5A623 !important;
+    color: #F5A623;
+    background: transparent !important;
+  }
+
+  .profile-modes-container .v-btn:first-child {
+    border-color: #2fad65 !important;
+    color: #2fad65;
+    background: transparent !important;
   }
 
   .chips-container {

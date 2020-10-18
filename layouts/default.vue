@@ -72,6 +72,12 @@ ul {
   text-align: center;
 }
 
+.coming-soon {
+  color: gray;
+  margin-top: 0;
+  font-size: 12px;
+}
+
 .subtitle {
   font-weight: 300;
   font-size: 42px;

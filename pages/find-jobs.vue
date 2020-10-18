@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <h1 class="title">Find Jobs</h1>
+      <p class="coming-soon">Coming Soon</p>
     </div>
   </div>
 </template>
