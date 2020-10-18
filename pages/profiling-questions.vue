@@ -2,24 +2,26 @@
   <div class="container">
     <div>
       <div v-for="question in filterQuestions()" v-bind:key="question.question" class="question">
-        <h1 class="title setup-title">{{question.question}}</h1>
-        <div class="actions">
-          <template v-if="questions.length !== currentQuestion">
-            <v-btn
-              v-for="answer in question.answers"
-              v-bind:key="answer.label"
-              depressed
-              elevation="2"
-              rounded
-              :outlined="answer.outlined"
-              @click="nextQuestion"
-              v-bind:class="{ 'reject-btn': answer.leave }"
-              :to="answer.leave ? '/profile' : undefined"
-            >
-              {{answer.label}}
-            </v-btn>
-          </template>
-          <v-btn v-if="questions.length === currentQuestion" depressed elevation="2" rounded to="/profile">View Profile</v-btn>
+        <div>
+          <h1 class="title setup-title">{{question.question}}</h1>
+          <div class="actions">
+            <template v-if="questions.length !== currentQuestion">
+              <v-btn
+                v-for="answer in question.answers"
+                v-bind:key="answer.label"
+                depressed
+                elevation="2"
+                rounded
+                :outlined="answer.outlined"
+                @click="nextQuestion"
+                v-bind:class="{ 'reject-btn': answer.outlined}"
+                :to="answer.leave ? '/profile' : undefined"
+              >
+                {{answer.label}}
+              </v-btn>
+            </template>
+            <v-btn v-if="questions.length === currentQuestion" depressed elevation="2" rounded to="/profile">View Profile</v-btn>
+          </div>
         </div>
       </div>
     </div>
@@ -50,45 +52,101 @@ export default Vue.extend({
           question: "Hi Thomas, we would like to get to know you better",
           answers: [
             {
+              label: 'Sure'
+            },
+            {
               label: 'No, Thanks',
               outlined: true,
               leave: true
             },
-            {
-              label: 'Sure'
-            }
           ]
         },
         {
           question: "Are you currently employed?",
           answers: [
             {
-              label: 'Skip'
-            },
-            {
               label: 'No',
             },
             {
               label: 'Yes'
-            }
+            },
+            {
+              label: 'Skip',
+              outlined: true
+            },
           ]
         },
         {
           question: "Are you urgently in need of a job?",
           answers: [
             {
-              label: 'Skip'
-            },
-            {
               label: 'No'
             },
             {
               label: 'Yes'
-            }
+            },
+            {
+              label: 'Skip',
+              outlined: true
+            },
           ]
         },
         {
-          question: "Thank you! We have prepared your profile.",
+          question: "Are you happy with your current field of work?",
+          answers: [
+            {
+              label: 'No'
+            },
+            {
+              label: 'Somewhat'
+            },
+            {
+              label: 'Yes'
+            },
+            {
+              label: 'Skip',
+              outlined: true
+            },
+          ]
+        },
+        {
+          question: "How long is your remaining career perspective?",
+          answers: [
+            {
+              label: '0 - 5 years'
+            },
+            {
+              label: '5 - 15 years'
+            },
+            {
+              label: '15+ years'
+            },
+            {
+              label: 'Skip',
+              outlined: true
+            },
+          ]
+        },
+        {
+          question: "Based on your current domain knowledge, does any of the following sound interesting?",
+          answers: [
+            {
+              label: 'Quality Assurance'
+            },
+            {
+              label: '3D printing'
+            },
+            {
+              label: 'Embedded Programming'
+            },
+            {
+              label: 'Skip',
+              outlined: true
+            },
+          ]
+        },
+        {
+          question: "Thank you, for allowing us to get to know you! We have prepared your profile.",
           answers: []
         }
       ]
@@ -105,16 +163,18 @@ export default Vue.extend({
 .actions {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   max-width: 250px;
   margin: 64px auto 0 auto;
 }
 
-.question:first-child {
-  margin-top: 100px;
+.actions .v-btn {
+  margin-top: 16px;
 }
 
 .question {
-  margin-top: 30vh;
-  margin-bottom: 30vh;
+  height: calc(100vh - 24px);
+  display: flex;
+  align-items: center;
 }
 </style>
