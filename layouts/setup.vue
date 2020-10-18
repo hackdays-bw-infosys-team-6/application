@@ -36,9 +36,9 @@ html {
 }
 
 .setup-container {
-  background: #56ab2f;
-  background: -webkit-linear-gradient(to top, #a8e063, #56ab2f);
-  background: linear-gradient(to top, #a8e063, #56ab2f);
+  background: #2fad65;
+  background: -webkit-linear-gradient(to top, #8dc24c, #2fad65);
+  background: linear-gradient(to top, #8dc24c, #2fad65);
 }
 
 .links {

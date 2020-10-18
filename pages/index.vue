@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page-container">
     <div class="pitch-container hide-on-mobile">
-      <h1>Skill match</h1>
+      <img src="icon.png" height="100px">
 
       <p>Are you looking to pivot your career after a layoff?</p>
       <p>Skill Match offers an intelligent profiling solution to determine the best course of action for your career. Where other platforms offer you more of the same, the Skill Match platform is able to truly understand your wishes and is able create drastic change in your career.</p>
@@ -30,8 +30,8 @@
 
     </div>
     <div class="login-container">
-      <h1 class="title setup-title hide-on-desktop">Skill Match</h1>
       <h1 class="title setup-title hide-on-mobile">Welcome</h1>
+      <img src="icon.png" height="100px" class="hide-on-desktop">
       <div class="links">
 
         <div class="login">
@@ -58,6 +58,7 @@ export default Vue.extend({
 p {
   margin: 16px 0;
   color: #000000de;
+  line-height: 1.5em;
 }
 
 .landing-page-container {
@@ -69,7 +70,7 @@ p {
   background: white;
   width: calc(100vw - 400px);
   min-height: 100vh;
-  padding: 50px;
+  padding: 30px 50px 100px 50px;
 }
 
 .login-container {
@@ -78,6 +79,11 @@ p {
   text-align: center;
   margin-top: 15vh;
   min-height: 85vh;
+}
+
+.login-container img {
+  border-radius: 15px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .screenshot-container {

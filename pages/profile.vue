@@ -34,7 +34,7 @@
       <div class="profile-section">
         <h2>EDUCATION</h2>
         <ul>
-          <li v-for="(education, i) in education" v-bind:key="i" v-bind:style="{ color: education.future ? 'orange' : '', cursor: education.future ? 'pointer' : '' }">{{ education.name }}</li>
+          <li v-for="(education, i) in education" v-bind:key="i" v-bind:style="{ color: education.future ? '#F5A623' : '', cursor: education.future ? 'pointer' : '' }">{{ education.name }}</li>
         </ul>
       </div>
 
@@ -72,9 +72,9 @@ export default Vue.extend({
   methods: {
     getColorOf(a: Skill) {
       if (a.future) {
-        return 'orange'
+        return '#F5A623'
       }
-      return 'green'
+      return '#2fad65'
     },
     setShowFutureProfile: function (show: boolean) {
       this.$store.commit('profile/UPDATE_INCLUDE_FUTURE', show)
@@ -98,7 +98,7 @@ export default Vue.extend({
     border-radius: 50%;
     height: 160px;
     width: 160px;
-    border: 2px solid #56ab2f;
+    border: 2px solid #2fad65;
   }
 
   .profile-modes-container {
@@ -106,7 +106,7 @@ export default Vue.extend({
   }
 
   .profile-modes-container .v-btn {
-    background-color: #56ab2f !important;
+    background-color: #2fad65 !important;
     color: white;
   }
 
